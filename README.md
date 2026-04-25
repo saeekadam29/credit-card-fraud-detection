@@ -10,10 +10,7 @@ The goal of this project is to build a fraud detection model that can accurately
 ## Dataset
 Source:
 ## Dataset
-The dataset used in this project is the Kaggle Credit Card Fraud Detection dataset.
-Download from:
-https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
-
+The dataset used in this project is the Kaggle Credit Card Fraud Detection dataset
 Dataset contains:
 - 284,807 transactions
 - 492 fraudulent transactions
@@ -52,9 +49,8 @@ Model training and evaluation will be added in the next phase.
 
 ## Folder Structure
 credit-card-fraud-detection/
-│── data/
-│── notebooks/
-│── src/
+│── data
+│── notebooks
 │── README.md
 
 Author- Saee kadam
