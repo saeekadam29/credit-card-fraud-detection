@@ -1,4 +1,4 @@
-# Fraud Detection Risk Analytics Dashboard
+# Fraud Detection Risk Analytics 
 
 Machine learning pipeline that flags fraudulent credit card transactions in a highly imbalanced, real-world-style dataset — built with a strict train/test leakage boundary, so every engineered feature would hold up if deployed on transactions the model has never seen.
 
@@ -38,10 +38,17 @@ Random Forest (100 trees, max depth 10) was the stronger model, catching 88% of 
 
 **5. Feature importance**
 Top drivers of fraud predictions: `V14`, `V4`, `V10`, `V12`, `V17` — anonymized PCA components, consistent with prior published work on this dataset.
+<img width="1200" height="900" alt="feature_importance" src="https://github.com/user-attachments/assets/6113ac37-f122-47e1-a38e-6704b823eddf" />
+
+<img width="900" height="600" alt="01_class_distribution1" src="https://github.com/user-attachments/assets/56ed01ff-154d-42ee-84c8-96e1e18ba694" />
+
+<img width="750" height="600" alt="cm_logistic_regression" src="https://github.com/user-attachments/assets/e7d75d6d-cf0a-4501-a262-d5a25e78cfef" />
+
+<img width="750" height="600" alt="cm_random_forest" src="https://github.com/user-attachments/assets/bd488b49-c02f-4686-8ac4-d6f550776399" />
+
+<img width="1800" height="750" alt="model_comparison_curves" src="https://github.com/user-attachments/assets/779c55cb-a237-4d0c-af77-4430047180f9" />
 
 ## Repo structure
-
-```
 ├── final_fraud_detection.ipynb   # full analysis notebook
 ├── 01_class_distribution.png     # class imbalance visualization
 ├── cm_logistic_regression.png    # confusion matrix — logistic regression
@@ -50,17 +57,11 @@ Top drivers of fraud predictions: `V14`, `V4`, `V10`, `V12`, `V17` — anonymize
 ├── feature_importance.png        # top 15 feature importances (RF)
 └── README.md
 ```
-
 ## Tech stack
-
 Python · pandas · NumPy · scikit-learn · imbalanced-learn (SMOTE) · matplotlib · seaborn
-
 ## How to run
-
-```bash
+bash
 pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
-jupyter notebook final_fraud_detection.ipynb
-```
-
-- Chose evaluation metrics appropriate for a 0.17%-positive-class problem instead of misleading accuracy
-- Compared an interpretable baseline (Logistic Regression) against a stronger non-linear model (Random Forest) and explained the trade-off in precision vs. recall
+jupyter notebook final_fraud_detection.ipynb 
+Chose evaluation metrics appropriate for a 0.17%-positive-class problem instead of misleading accuracy
+Compared an interpretable baseline (Logistic Regression) against a stronger non-linear model (Random Forest) and explained the trade-off in precision vs. recall
